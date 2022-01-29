@@ -1,0 +1,1249 @@
+function math_random_int(a, b) {
+  if (a > b) {
+    // Swap a and b to ensure a is smaller.
+    var c = a;
+    a = b;
+    b = c;
+  }
+  return Math.floor(Math.random() * (b - a + 1) + a);
+}
+
+
+if ( selectedChoice.name == "Jogar") {
+  changeLayer("Vila Python");
+  popup("VILA PYTHON");
+  popup("");
+  popup("Vamos começar nossa aventura, a biblioteca possui livros importantes, vamos começar por lá.");
+  popup("");
+  popup("Precisamos encontrar um computador para eliminar o vírus.");
+  popup("");
+  popup("Boa Sorte!");
+  playSound("media/sounds/intro.wav");
+}
+if ( selectedChoice.name == "Créditos") {
+  playSound("media/sounds/beep.wav");
+  changeLayer("Créditos");
+}
+if ( selectedChoice.name == "Voltar") {
+  playSound("media/sounds/beep.wav");
+  changeLayer("Main");
+}
+
+if ( selectedChoice.name == "Lista Dos Operadores Compostos") {
+  popup("LISTA DOS OPERADORES COMPOSTOS");
+  popup("");
+  popup("+= (mais igual)");
+  popup("");
+  popup("-= (menos igual)");
+  popup("");
+  popup("*= (vezes igual)");
+  popup("");
+  popup("/= (dividido igual)");
+  popup("");
+  popup("%= (módulo igual)");
+  popup("");
+  popup("Fim.");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "Comando If") {
+  popup("IF");
+  popup("");
+  popup("O comando if é uma forma de avaliar uma expressão. ");
+  popup("");
+  popup("E de acordo com seu resultado, executar uma determinada ação.");
+  popup("");
+  popup("idade = 7");
+  popup("");
+  popup("if idade < 10:");
+  popup("");
+  popup(" print('Você é uma criaça!')");
+  popup("");
+  popup("Fim.");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "Operadores Compostos") {
+  popup("OPERADORES COMPOSTOS");
+  popup("");
+  popup(" Os Operadores de Atribuição Compostos realizam uma operação e em seguida, atribuem o resultado da operação para a variável que está a esquerda do operador de atribuição.");
+  popup("");
+  popup("Os operadores compostos são formados pela junção do operador de atribuição com o operadores aritméticos, onde o operador matemático precede o operador de atribuição.");
+  popup("");
+  popup("x += 1 (estamos atribuindo 1 a variável x)");
+  popup("");
+  popup("Fim.");
+  playSound("media/sounds/beep.wav");
+}
+
+if ( selectedChoice.name == "Corredor A") {
+  changeLayer("Corredor Norte");
+}
+if (( selectedChoice.name == "Sala A") && ((Espada) == 0 && (Experiência) >= 185)) {
+  changeLayer("Espada A");
+  popup("GANDALF");
+  popup("");
+  popup("Não Acredito que você derrotou o Ogro.");
+  popup("");
+  popup("Entre e pegue o que quiser.");
+  playSound("media/sounds/door_open.wav");
+} else if (( selectedChoice.name == "Sala A") && ((Espada) >= 0 && (Experiência) < 185)) {
+  popup("GANDALF");
+  popup("");
+  popup("Você não pode entrar.");
+  popup("");
+  popup("Apenas com a autorização do Ogro para passar.");
+  popup("");
+  playSound("media/sounds/beep.wav");
+} else if (( selectedChoice.name == "Sala A") && ((Espada) == 1 && (Experiência) >= 185)) {
+  popup("GANDALF");
+  popup("");
+  popup("Recupere seu reino e nos traga a paz.");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "Excalibur") {
+  popup("EXCALIBUR");
+  popup("");
+  popup("Você conseguiu a lendária espada do Rei Artur.");
+  popup("");
+  popup("Boa sorte guerreiro.");
+  playSound("media/sounds/heal.wav");
+  changeLayer("Espada B");
+}
+if ( selectedChoice.name == "Saída / Sala Secreta") {
+  changeLayer("Corredor Norte");
+  playSound("media/sounds/door_open.wav");
+}
+if (( selectedChoice.name == "Sala B") && (Machado) == 0) {
+  popup("MÓRIA!");
+  popup("");
+  popup("Quebre o feitiço para ter acesso.");
+  popup("");
+  popup("Encontre o machado mágico.");
+  playSound("media/sounds/beep.wav");
+} else if (( selectedChoice.name == "Sala B") && (Machado) == 1) {
+  changeLayer("Sala B");
+  playSound("media/sounds/door_open.wav");
+}
+if ( selectedChoice.name == "Saída Sala B") {
+  changeLayer("Corredor Norte");
+  playSound("media/sounds/door_open.wav");
+}
+if (( selectedChoice.name == "Vírus Ifelse") && (Experiência) < 155) {
+  popup("HACKEAR SALA");
+  popup("");
+  popup("Faça a conexão correta para saída correspondente.");
+  popup("");
+  popup("Boa sorte!");
+  playSound("media/sounds/beep.wav");
+  changeLayer("Vírus If-Else");
+} else if ( selectedChoice.name == "Vírus Ifelse") {
+  popup("SISTEMA DANIFICADO!");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "Conectar Ponto A") {
+  popup("DESCONECTADO!");
+  changeLayer("Sala B");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "Conectar Ponto B") {
+  popup("SUCESSO!");
+  popup("");
+  popup("Precisamos ir embora, antes que nos encontrem aqui.");
+  playSound("media/sounds/correct.wav");
+  changeLayer("Saída If");
+}
+if ( selectedChoice.name == "Saída If/Else") {
+  popup("RECOMPENSA!");
+  popup("");
+  popup("( Exp +30 )");
+  popup("");
+  popup("Você conseguiu acesso a sala secreta!");
+  playSound("media/sounds/beep.wav");
+  changeLayer("Sala B");
+}
+if ( selectedChoice.name == "Saída Sul") {
+  changeLayer("Salão Principal");
+}
+if ( selectedChoice.name == "Saída Norte") {
+  changeLayer("Salão Principal");
+}
+
+if (( selectedChoice.name == "Salão De Jogos") && (Chave) == 0) {
+  if ((Ouro) <= 0) {
+    popup("Acesso Negado!");
+    popup("");
+    popup(" Será necessário uma moeda de ouro, caso não tenha moedas, procure pelo Ganância.");
+    popup("");
+    popup("Você pode conseguir moedas com ele.");
+    popup("");
+    popup("Ele cobra por este serviço, reduzindo seu tempo e sua saúde!");
+    playSound("media/sounds/beep.wav");
+  } else if ((Ouro) > 0) {
+    changeLayer("Jogos");
+    changePointVisibility('all points',1);
+    changePointVisibility("Regras",2);
+    changePointVisibility("Pagamento",2);
+    changePointVisibility("Saída / Jogos",2);
+  }
+} else if ( selectedChoice.name == "Salão De Jogos") {
+  popup("EVENTO CONCLUÍDO!");
+  popup("");
+  popup("Encontre novos desafios, a vila é muito grande.");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "Saída / Jogos") {
+  changeLayer("Vila Python");
+  popup("ACABOU O OURO!");
+  popup("");
+  popup("Procure o feiticeiro, ele vai te ajudar.");
+  popup("");
+  popup("Mas cuidado, fique esperto com ele.");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "Regras") {
+  popup("Aqui não tem segredo é pedra, papel ou tesoura!");
+  popup("");
+  popup("Pedra ganha de tesoura.");
+  popup("");
+  popup("Tesoura ganha de papel.");
+  popup("");
+  popup("Papel ganha de pedra.");
+  popup("");
+  popup("Fim.");
+  playSound("media/sounds/beep.wav");
+}
+if (( selectedChoice.name == "Pagamento") && (Ouro) > 0) {
+  playSound("media/sounds/coin.wav");
+  changePointVisibility('all points',1);
+  changePointVisibility("Pedra",2);
+  changePointVisibility("Papel",2);
+  changePointVisibility("Tesoura",2);
+} else if ( selectedChoice.name == "Pagamento") {
+  popup("SEU OURO ACABOU!");
+  popup("");
+  popup("Impossível jogar sem ouro, volte quando estiver com algum.");
+  playSound("media/sounds/beep.wav");
+}
+if (( selectedChoice.name == "Papel") && math_random_int(1, 2) == 2) {
+  popup("VOCÊ VENCEU!");
+  popup("");
+  popup("Ogro: Pedra");
+  popup("");
+  popup("Jogador: Papel.");
+  popup("");
+  popup("Papel vence pedra.");
+  popup("");
+  popup("Parabéns!");
+  playSound("media/sounds/correct.wav");
+  changeLayer("Joken Bônus");
+  changePointVisibility('all points',1);
+  changePointVisibility("Saúde",2);
+} else if ( selectedChoice.name == "Papel") {
+  popup("VOCÊ PERDEU!");
+  popup("");
+  popup("Ogro: Tesoura.");
+  popup("");
+  popup("Jogador: Papel.");
+  popup("");
+  popup("Tesoura vence papel.");
+  popup("");
+  popup("Tente outra vez!");
+  playSound("media/sounds/fail.wav");
+  changePointVisibility('all points',1);
+  changePointVisibility("Pagamento",2);
+  changePointVisibility("Saída / Jogos",2);
+  changePointVisibility("Regras",2);
+}
+if (( selectedChoice.name == "Pedra") && math_random_int(1, 2) == 2) {
+  popup("VOCÊ VENCEU!");
+  popup("");
+  popup("Ogro: Tesoura.");
+  popup("");
+  popup("Jogador: Pedra.");
+  popup("");
+  popup("Pedra vence tesoura.");
+  popup("");
+  popup("Parabéns!");
+  playSound("media/sounds/correct.wav");
+  changeLayer("Joken Bônus");
+  changePointVisibility('all points',1);
+  changePointVisibility("Saúde",2);
+} else if ( selectedChoice.name == "Pedra") {
+  popup("VOCÊ PERDEU!");
+  popup("");
+  popup("Ogro: Papel.");
+  popup("");
+  popup("Jogador: Pedra.");
+  popup("");
+  popup("Papel vence pedra.");
+  popup("");
+  popup("Tente outra vez novato!");
+  playSound("media/sounds/fail.wav");
+  changePointVisibility('all points',1);
+  changePointVisibility("Pagamento",2);
+  changePointVisibility("Saída / Jogos",2);
+  changePointVisibility("Regras",2);
+}
+if (( selectedChoice.name == "Tesoura") && math_random_int(1, 2) == 2) {
+  popup("VOCÊ VENCEU!");
+  popup("");
+  popup("Ogro: Papel.");
+  popup("");
+  popup("Jogador: Tesoura.");
+  popup("");
+  popup("Tesoura vence papel..");
+  popup("");
+  popup("Parabéns!");
+  playSound("media/sounds/correct.wav");
+  changeLayer("Joken Bônus");
+  changePointVisibility('all points',1);
+  changePointVisibility("Saúde",2);
+} else if ( selectedChoice.name == "Tesoura") {
+  popup("VOCÊ PERDEU!");
+  popup("");
+  popup("Ogro: Pedra.");
+  popup("");
+  popup("Jogador: Tesoura.");
+  popup("");
+  popup("Pedra vence tesoura.");
+  popup("");
+  popup("Está difícil novato?");
+  playSound("media/sounds/fail.wav");
+  changePointVisibility('all points',1);
+  changePointVisibility("Pagamento",2);
+  changePointVisibility("Saída / Jogos",2);
+  changePointVisibility("Regras",2);
+}
+
+if ( selectedChoice.name == "Saúde") {
+  popup("Saúde +10");
+  playSound("media/sounds/heal.wav");
+  changePointVisibility("Saúde",1);
+  changePointVisibility("EXP",2);
+}
+if ( selectedChoice.name == "EXP") {
+  popup("Experiência +10");
+  playSound("media/sounds/heal.wav");
+  changePointVisibility("EXP",1);
+  changePointVisibility("Chave",2);
+}
+if ( selectedChoice.name == "Chave") {
+  changePointVisibility("Chave",1);
+  changePointVisibility("Saída / Bônus",2);
+  playSound("media/sounds/correct.wav");
+  popup("SECESSO!");
+  popup("");
+  popup("Chave principal encontrada.");
+}
+if ( selectedChoice.name == "Saída / Bônus") {
+  popup("PERIGO!");
+  popup("");
+  popup("O Ogro não gostou de sua vitória, ele pretende se vingar.");
+  popup("");
+  popup("Tome muito cuidado!");
+  playSound("media/sounds/beep.wav");
+  changeLayer("Vila Python");
+}
+
+if ( selectedChoice.name == "Saída / Castelo") {
+  playSound("media/sounds/door_open.wav");
+  changeLayer("Vila Python");
+}
+if ( selectedChoice.name == "Lista Dos Operadores Relacionais") {
+  popup("LISTA DOS OPERADORES RELACIONAIS");
+  popup("");
+  popup("Maior que ( > )");
+  popup("");
+  popup("Menor que ( < )");
+  popup("");
+  popup("Igual a ( == )");
+  popup("");
+  popup("Maior ou igual a ( >= )");
+  popup("");
+  popup("Menor ou igual a ( <= )");
+  popup("");
+  popup("Diferente ( != )");
+  popup("");
+  popup("Fim.");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "Exemplo IF/ELSE") {
+  popup("EXEMPLO IF/ELSE");
+  popup("");
+  popup("No exemplo a seguir, caso a condição if seja positiva ele imprime (Você é um idoso) e caso seja falsa imprime (Você não é um idoso).");
+  popup("");
+  popup("idade = 62");
+  popup("");
+  popup(" if idade > 60:     ");
+  popup("");
+  popup("print('Você é um idoso!')");
+  popup("");
+  popup("else: ");
+  popup("");
+  popup("print('Você não é um idoso!')");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "Tomada De Decisão") {
+  popup("TOMADA DE DECISÃO");
+  popup("");
+  popup(" A Tomada de Decisão é composta por uma expressão a ser avaliada e o que deve acontecer caso a expressão seja verdadeira ou então, caso a expressão seja falsa.");
+  popup("");
+  popup(" Ou seja, é a execução de uma bloco de instrução conforme o resultado de uma expressão lógica.");
+  popup("");
+  popup("Uma das melhores formas de lidar com isso, é o comando If/Else.");
+  playSound("media/sounds/beep.wav");
+}
+
+if ( selectedChoice.name == "Entrada Principal") {
+  if ((Chave) == 0 && (Experiência) < 90) {
+    popup("ACESSO NEGADO!");
+    popup("");
+    popup("Vença todos os desafios desta área para conseguir experiência.");
+    popup("");
+    popup("Será necessário a chave e nível de experiência maior ou igual 90.");
+    playSound("media/sounds/beep.wav");
+  } else if ((Chave) == 1 && (Experiência) < 90) {
+    popup("ACESSO NEGADO!");
+    popup("");
+    popup("Complete todos os desafios para elevar seu nível de experiência.");
+    playSound("media/sounds/beep.wav");
+  } else if ( selectedChoice.name == "Entrada Principal") {
+    changeLayer("Salão Principal");
+    playSound("media/sounds/door_open.wav");
+  }
+}
+
+if ( selectedChoice.name == "Biblioteca") {
+  changeLayer("Biblioteca");
+}
+if ( selectedChoice.name == "Atribuição De Valores") {
+  popup("Atribuição de Valores é a passagem de informação a determinada variável, a linguagem Python utiliza o sinal de igual ( = ) como operador de atribuição.");
+  popup("");
+  popup(" Toda variável, pode receber valores ou então, pode ter seu valor alterado.");
+  popup("");
+  popup("x = 18");
+  popup("");
+  popup("A parte ao lado esquerdo do operador de atribuição sempre receberá o valor definido no lado direito do operador.");
+  popup("");
+  popup("Fim.");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "Aritmética") {
+  popup("O Python tem operadores, que são símbolos especiais representando operações de computação.");
+  popup("");
+  popup("Adição (+)");
+  popup("");
+  popup("Subtração (-)");
+  popup("");
+  popup("Divisão (/)");
+  popup("");
+  popup("Multiplicação (*) & Exponenciação (**)");
+  popup("");
+  popup("Fim");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "Variável") {
+  popup("Uma variável é um nome que se refere a um valor. utilizando o operador de atribuição ( = ) ,nossa variável x passar a conter o valor 10.");
+  popup("");
+  popup("Variáveis são usadas para guardarmos valores que serão usados mais tarde no programa");
+  popup("");
+  popup("Tipo isso!");
+  popup("");
+  popup("x = 2");
+  popup("");
+  popup("Fim.");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "Python 1989") {
+  popup("Python foi criado no final dos anos oitenta(1989) por Guido van Rossum no Centro de Matemática e Tecnológia da Informação (CWI, Centrum Wiskunde e Informatica), na Holanda.");
+  popup("");
+  popup("Geralmente o primeiro programa a ser criado é o (Olá Mundo!), no Python, ele se parece com isto:");
+  popup("");
+  popup(">>> print(“Olá, Mundo!”)");
+  popup("");
+  popup("Olá, Mundo!");
+  popup("");
+  popup("Exemplo de uma instrução print (instrução de impressão).");
+  popup("");
+  popup("Fim.");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "Saída / Biblioteca") {
+  changeLayer("Vila Python");
+}
+if ( selectedChoice.name == "Mapa") {
+  popup("VILA PYTHON");
+  popup("");
+  popup("Ogro, se encontra na casa de jogos.");
+  popup("");
+  popup("Armadura, se encontra no subsolo.");
+  popup("");
+  popup("Espada, localização desconhecida.");
+  popup("");
+  popup("Ouro, fale com o monstro da Ganância");
+  popup("");
+  popup("Norte, vírus em alerta!");
+  popup("");
+  popup("Fim");
+  playSound("media/sounds/beep.wav");
+}
+
+if ( selectedChoice.name == "Região Sul") {
+  changeLayer("Sul");
+}
+if ( selectedChoice.name == "Centro / Sul") {
+  changeLayer("Vila Python");
+}
+if ( selectedChoice.name == "Entrada Sul") {
+  if ((Armadura) == 1) {
+    changeLayer("Subsolo B");
+    if ((Saúde) <= 15) {
+      changePointVisibility("Fonte Da Vida",1);
+    } else if ((Saúde) > 15) {
+      changePointVisibility("Recarga De Saúde",1);
+    }
+  } else if ((Armadura) == 0) {
+    changeLayer("Subsolo A");
+    changePointVisibility("Jogar",1);
+  }
+}
+if ( selectedChoice.name == "Operações Booleanas") {
+  popup("EXPRESSÔES BOOLEANAS");
+  popup("");
+  popup("Uma expressão booleana é uma expressão que pode ser verdadeira ou falsa");
+  popup("");
+  popup("Os exemplos seguintes usam o operador ==, que compara dois operandos e produz True se forem iguais e False se não forem:");
+  popup("");
+  popup(">>> 5 == 5 (true)");
+  popup("");
+  popup(">>> 5 == 6 (false)");
+  popup("");
+  popup("Fim.");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "Ganância / Ouro") {
+  popup("Ganância");
+  popup("");
+  popup("Bom negócio, volte sempre que precisar kkkk!");
+  popup("");
+  popup("( Ouro +1 )");
+  popup("");
+  popup("( Saúde -5 )");
+  popup("");
+  popup("( Tempo -5 )");
+  playSound("https://pixel-python-musics.herokuapp.com/sounds/risada-malvada.wav");
+}
+
+if (( selectedChoice.name == "Desafio Final") && ((Espada) == 0 || (Escudo) == 0)) {
+  popup("BLOQUEADA!");
+  popup("");
+  popup("Complete seu traje de Guerreiro para ter acesso.");
+  popup("");
+  playSound("media/sounds/beep.wav");
+} else if (( selectedChoice.name == "Desafio Final") && ((Espada) == 1 && (Escudo) == 1)) {
+  popup("DESAFIO FINAL!");
+  popup("");
+  popup("Faça a escolha dos blocos que contém os operadores compostos do Python.");
+  popup("");
+  popup("Boa Sorte.");
+  changeLayer("Desafio Final");
+  playSound("https://pixel-python-musics.herokuapp.com/sounds/risada-malvada.wav");
+}
+if ( selectedChoice.name == "B1") {
+  popup("BLOCO ERRADO!");
+  popup("");
+  popup("Vá com calma, não tenha pressa!");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "B2") {
+  popup("BLOCO ERRADO!");
+  popup("");
+  popup("Vá com calma, não tenha pressa!");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "B3") {
+  popup("BLOCO ERRADO!");
+  popup("");
+  popup("Vá com calma, não tenha pressa!");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "B4") {
+  popup("SUCESSO!");
+  popup("");
+  popup("Bloco desativado.");
+  playSound("media/sounds/correct.wav");
+  changeLayer("Final B");
+}
+if ( selectedChoice.name == "B5") {
+  popup("SUCESSO!");
+  popup("");
+  popup("Bloco desativado.");
+  playSound("media/sounds/correct.wav");
+  changeLayer("Final C");
+}
+if ( selectedChoice.name == "B6") {
+  playSound("media/sounds/fail.wav");
+  popup("BLOCO ERRADO!");
+  popup("");
+  popup("Vá com calma, não tenha pressa!");
+}
+if ( selectedChoice.name == "B7") {
+  popup("BLOCO ERRADO!");
+  popup("");
+  popup("Vá com calma, não tenha pressa!");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "B8") {
+  popup("BLOCO ERRADO!");
+  popup("");
+  popup("Vá com calma, não tenha pressa!");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "B9") {
+  popup("BLOCO ERRADO!");
+  popup("");
+  popup("Vá com calma, não tenha pressa!");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "B10") {
+  popup("SUCESSO!");
+  popup("");
+  popup("Bloco desativado.");
+  playSound("media/sounds/correct.wav");
+  changeLayer("Final D");
+}
+if ( selectedChoice.name == "B11") {
+  popup("BLOCO ERRADO!");
+  popup("");
+  popup("Vá com calma, não tenha pressa!");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "B12") {
+  popup("BLOCO ERRADO!");
+  popup("");
+  popup("Vá com calma, não tenha pressa!");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "B13") {
+  popup("BLOCO ERRADO!");
+  popup("");
+  popup("Vá com calma, não tenha pressa!");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "B14") {
+  popup("SUCESSO!");
+  popup("");
+  popup("Feitiço Python quebrado.");
+  popup("");
+  popup("Todos os blocos foram desativado.");
+  playSound("media/sounds/correct.wav");
+  changeLayer("Final E");
+  changePointVisibility("Último Ataque!",1);
+}
+if ( selectedChoice.name == "B15") {
+  popup("BLOCO ERRADO!");
+  popup("");
+  popup("Vá com calma, não tenha pressa!");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "Rasputim") {
+  popup("RASPUTIM!");
+  popup("");
+  popup("Não acredito, você arruinou meu plano.");
+  popup("");
+  popup("Eu vou me vingar.");
+  playSound("media/sounds/beep.wav");
+  changePointVisibility("Último Ataque!",2);
+  changePointVisibility("Rasputim",1);
+}
+if ( selectedChoice.name == "Último Ataque!") {
+  changeLayer("Fim De Jogo");
+  popup("SUCESSO!");
+  popup("");
+  popup("Rasputim foi derrotado.");
+  popup("");
+  popup("Você adquiriu um pouco de conhecimento da linguagem de programação Python.");
+  popup("");
+  popup("Parabéns!");
+  playSound("media/sounds/correct.wav");
+}
+
+if ( selectedChoice.name == "Ponto 1") {
+  popup("FALHA DE CONEXÃO!");
+  popup("");
+  popup("Vá com calma, não tenha pressa!");
+  changeLayer("Corredor Sul");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "Ponto 3") {
+  popup("FALHA DE CONEXÃO!");
+  popup("");
+  popup("Não perca seu tempo aqui!");
+  changeLayer("Corredor Sul");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "Ponto 4") {
+  popup("FALHA DE CONEXÃO!");
+  popup("");
+  popup("Vá com calma, não tenha pressa!");
+  changeLayer("Corredor Sul");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "Ponto 7") {
+  popup("FALHA DE CONEXÃO!");
+  popup("");
+  popup("Vá com calma, não tenha pressa!");
+  changeLayer("Corredor Sul");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "Ponto 8") {
+  popup("FALHA DE CONEXÃO!");
+  popup("");
+  popup("Vá com calma, você consegue!");
+  changeLayer("Corredor Sul");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "Ponto 9") {
+  popup("FALHA DE CONEXÃO!");
+  popup("");
+  popup("Vá com calma, não tenha pressa!");
+  changeLayer("Corredor Sul");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "Ponto 11") {
+  popup("FALHA DE CONEXÃO!");
+  popup("");
+  popup("Vá com calma, não tenha pressa!");
+  changeLayer("Corredor Sul");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "Ponto 12") {
+  popup("FALHA DE CONEXÃO!");
+  popup("");
+  popup("Vá com calma, você consegue!");
+  changeLayer("Corredor Sul");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "Ponto 14") {
+  popup("FALHA DE CONEXÃO!");
+  popup("");
+  popup("Vá com calma, você consegue!");
+  changeLayer("Corredor Sul");
+  playSound("media/sounds/fail.wav");
+}
+
+if (( selectedChoice.name == "Região Norte") && (Experiência) < 60) {
+  popup("PASSAGEM BLOQUEADA!");
+  playSound("media/sounds/beep.wav");
+} else if ( selectedChoice.name == "Região Norte") {
+  if ((Experiência) >= 60) {
+    changeLayer("Norte");
+    changePointVisibility("Eliminar Vírus",1);
+  } else if ((Experiência) < 60) {
+    changeLayer("Norte");
+  }
+}
+if (( selectedChoice.name == "Norte / Centro") && (Experiência) >= 60) {
+  changeLayer("Vila Python");
+} else if ( selectedChoice.name == "Norte / Centro") {
+  popup("PASSAGEM BLOQUEADA!");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "Entrada Norte") {
+  if ((Armadura) == 1) {
+    changeLayer("Subsolo B");
+    if ((Saúde) <= 15) {
+      changePointVisibility("Fonte Da Vida",1);
+    } else if ((Saúde) > 15) {
+      changePointVisibility("Recarga De Saúde",1);
+    }
+  } else if ((Armadura) == 0) {
+    changeLayer("Subsolo A");
+    changePointVisibility("Jogar",1);
+  }
+}
+if ( selectedChoice.name == "Operadores Relacionais") {
+  popup("Operadores Relacionais.");
+  popup("");
+  popup(" Operador Relacional é todo operador que obtém a relação do membro a esquerda com o membro a sua direita.");
+  popup("");
+  popup(" A linguagem Python trabalha com os operadores relacionais, também chamados de operadores comparativos, da mesma forma que a maioria das outras linguagens, tais como C, C++, Java, C# e etc.");
+  popup("");
+  popup("Fim.");
+  playSound("media/sounds/beep.wav");
+}
+if (( selectedChoice.name == "Extremo Norte") && ((Machado) == 0 && (Experiência) >= 125)) {
+  changeLayer("Extremo Norte B");
+} else if (( selectedChoice.name == "Extremo Norte") && (( selectedChoice.name == "Extremo Norte") || (Machado) == 1)) {
+  changeLayer("Extremo Norte");
+}
+if ( selectedChoice.name == "Retorno / Norte") {
+  changeLayer("Norte");
+}
+if ( selectedChoice.name == "Machado") {
+  popup("MACHADO");
+  popup("");
+  popup("Você encontrou machado mágico, com ele podemos destruir e abrir portas com feitiço.");
+  playSound("media/sounds/correct.wav");
+  changeLayer("Extremo Norte");
+}
+
+if ( selectedChoice.name == "Armadura") {
+  changeLayer("Subsolo B");
+  popup("ARMADURA");
+  popup("");
+  popup("Sucesso, você encontrou uma parte da armadura.");
+  popup("");
+  popup("Será necessário todas as partes para derrotar o chefe final.");
+  popup("");
+  popup(" ( Exp +4 )");
+  playSound("media/sounds/heal.wav");
+  if ((Saúde) <= 15) {
+    changePointVisibility("Fonte Da Vida",1);
+  } else if ((Saúde) > 15) {
+    changePointVisibility("Recarga De Saúde",1);
+  }
+}
+if ( selectedChoice.name == "Fonte Da Vida") {
+  popup("RECARGA DE SAÙDE!");
+  popup("");
+  popup("Sempre que sua saúde estiver no limite, abaixo de 15.");
+  popup("");
+  popup("Venha para recarregar!");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "Recarga De Saúde") {
+  changePointVisibility("Recarga De Saúde",1);
+  changePointVisibility("Fonte Da Vida",2);
+  playSound("media/sounds/heal.wav");
+  popup("RECARGA OBTIDA COM SUCESSO!");
+  popup("");
+  popup("( Saúde +20 )");
+}
+if ( selectedChoice.name == "Operador And") {
+  popup("AND");
+  popup("");
+  popup("Dados dois valores booleanos A e B, o operador lógico and resulta em True apenas quando A e B foram ambos True, e retorna False caso contrário.");
+  popup("");
+  popup("(A = true) and (B = true) = true");
+  popup("");
+  popup("(A = false) and (B = false) = false");
+  popup("");
+  popup("(A = true) and (B = false) = false");
+  popup("");
+  popup("Fim.");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "Operador Or") {
+  popup("OR");
+  popup("");
+  popup("Dados dois valores booleanos A e B, o operador lógico or resulta em False apenas quando A e B foram ambos False, e retorna True caso contrário.");
+  popup("");
+  popup("(A = true) or (B = true) = true");
+  popup("");
+  popup("(A = false) or (B = true) = true");
+  popup("");
+  popup("(A = false) or (B = false) = false");
+  popup("");
+  popup("Fim");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "Operador Not") {
+  popup("NOT");
+  popup("");
+  popup("O operador lógico not muda o valor de seu argumento, ou seja, not True é False, e not False é True.");
+  popup("");
+  popup("Fim.");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "Sul") {
+  changeLayer("Sul");
+}
+if ( selectedChoice.name == "Norte") {
+  if ((Experiência) >= 60) {
+    changeLayer("Norte");
+    changePointVisibility("Eliminar Vírus",1);
+  } else if ((Experiência) < 60) {
+    changeLayer("Norte");
+  }
+}
+
+if (( selectedChoice.name == "Corredor B") && (Experiência) < 125) {
+  changeLayer("Corredor Sul");
+  changePointVisibility('all points',1);
+  changePointVisibility("Sala C",2);
+} else if ( selectedChoice.name == "Corredor B") {
+  changeLayer("Corredor Sul");
+}
+if (( selectedChoice.name == "Sala C") && (Experiência) < 125) {
+  changePointVisibility("Sala D",2);
+  popup("GUIMBA!");
+  popup("");
+  popup("Podem passar, eu estou ao seu lado.");
+  popup("");
+  popup("Esta sala não possui conteúdo importante.");
+  popup("");
+  popup("Tente Acessar a próxima sala.");
+  playSound("media/sounds/beep.wav");
+} else if ( selectedChoice.name == "Sala C") {
+  popup("GUIMBA!");
+  popup("");
+  popup("Ei amigo, confiamos em você.");
+  playSound("media/sounds/beep.wav");
+  changePointVisibility("Saída Sul",2);
+}
+if (( selectedChoice.name == "Sala D") && (Experiência) < 125) {
+  popup("CAMPO MINADO");
+  popup("");
+  popup("Supere todas as camadas de proteção do sistema, para ter acesso a esta sala de computadores.");
+  popup("");
+  popup("Realize a conexão dos operadores relacionais, errar te levará ao início.");
+  popup("");
+  popup("Não perca sua conexão!");
+  popup("");
+  popup("Boa sorte!");
+  playSound("media/sounds/beep.wav");
+  changeLayer("Minado_01");
+} else if (( selectedChoice.name == "Sala D") && (Experiência) >= 125) {
+  changeLayer("Sala D");
+  playSound("media/sounds/door_open.wav");
+}
+if ( selectedChoice.name == "Ponto 2") {
+  changeLayer("Minado_02");
+  playSound("media/sounds/correct.wav");
+}
+if ( selectedChoice.name == "Ponto 5") {
+  changeLayer("Minado_03");
+  playSound("media/sounds/correct.wav");
+}
+if ( selectedChoice.name == "Ponto 6") {
+  changeLayer("Minado_04");
+  playSound("media/sounds/correct.wav");
+}
+if ( selectedChoice.name == "Ponto 10") {
+  changeLayer("Minado_05");
+  playSound("media/sounds/correct.wav");
+}
+if ( selectedChoice.name == "Ponto 13") {
+  changeLayer("Minado_06");
+  playSound("media/sounds/correct.wav");
+}
+if ( selectedChoice.name == "Ponto 15") {
+  changeLayer("Minado_07");
+  playSound("media/sounds/correct.wav");
+}
+if ( selectedChoice.name == "Acesso") {
+  popup("CONECTADO AO SISTEMA!");
+  popup("");
+  popup("Você conseguiu acessar o sistema.");
+  popup("");
+  popup("Libere seu acesso a sala D");
+  playSound("media/sounds/correct.wav");
+  changeLayer("Minado_08");
+}
+if ( selectedChoice.name == "Liberar Porta") {
+  popup("SUCESSO!");
+  popup("");
+  popup("Sala secreta liberada!");
+  popup("");
+  popup("( Tempo +10 )");
+  popup("");
+  popup("( EXP +30 )");
+  changeLayer("Sala D");
+  playSound("media/sounds/door_open.wav");
+}
+if ( selectedChoice.name == "Saída Sala D") {
+  changeLayer("Corredor Sul");
+  playSound("media/sounds/door_open.wav");
+}
+if ( selectedChoice.name == "Sistema Secreto") {
+  popup("ARQUIVOS CONFIDENCIAIS");
+  popup("");
+  popup("Para ter acesso a  salas com feitiço, você vai precisar do machado.");
+  popup("");
+  popup("Ele se encontra no extremo norte, fora do castelo.");
+  popup("");
+  popup("Boa sorte!");
+  playSound("media/sounds/correct.wav");
+}
+
+if (( selectedChoice.name == "Eliminar Vírus") && (Chip) == 1) {
+  changeLayer("K");
+  popup("VÍRUS K EM ANDAMENTO!");
+  popup("");
+  popup(" Faça a leitura e click no botão correto, para eliminar essa operação maliciosa.");
+  popup("");
+  popup("O sistema está utilizando algum operador booleano.");
+  popup("");
+  popup("Cuidado com o sistema de defesa!");
+  popup("");
+  popup("Boa sorte!");
+  playSound("media/sounds/beep.wav");
+} else if ( selectedChoice.name == "Eliminar Vírus") {
+  popup("ACESSO NEGADO!");
+  popup("");
+  popup("Erro crítico de acesso.");
+  popup("");
+  popup("Será necessário um chip de acesso para entrar no sistema.");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "K = true") {
+  popup("DESCONECTADO!");
+  popup("");
+  popup("Falha de acesso, erro crítico .");
+  playSound("media/sounds/fail.wav");
+  changeLayer("Norte");
+}
+if ( selectedChoice.name == "K = false") {
+  popup("SISTEMA DE DEFESA ATIVADO!");
+  popup("");
+  popup("O vírus está reagindo ao seu ataque, seja rápido!");
+  playSound("media/sounds/correct.wav");
+  changeLayer("S");
+}
+if ( selectedChoice.name == "S = false") {
+  popup("DESCONECTADO!");
+  popup("");
+  popup("Falha de acesso, erro crítico .");
+  playSound("media/sounds/fail.wav");
+  changeLayer("Norte");
+}
+if ( selectedChoice.name == "S = true") {
+  popup("SECESSO!");
+  popup("");
+  popup("Você conseguiu acessar o sistema, recolha suas recompensas.");
+  playSound("media/sounds/correct.wav");
+  changeLayer("Bônus Vírus");
+  changePointVisibility('all points',1);
+  changePointVisibility("Tempo",2);
+}
+if ( selectedChoice.name == "Tempo") {
+  popup("( Tempo +10 )");
+  playSound("media/sounds/heal.wav");
+  changePointVisibility("Tempo",1);
+  changePointVisibility("Carne",2);
+}
+if ( selectedChoice.name == "Carne") {
+  popup("( Saúde +10 )");
+  popup("");
+  popup("( Exp +35 )");
+  playSound("media/sounds/heal.wav");
+  changePointVisibility("Carne",1);
+  changePointVisibility("Ouro",2);
+}
+if ( selectedChoice.name == "Ouro") {
+  popup("( Ouro +5 )");
+  playSound("media/sounds/coin.wav");
+  changePointVisibility("Ouro",1);
+  changePointVisibility("Saída Vírus",2);
+}
+if ( selectedChoice.name == "Saída Vírus") {
+  popup("SUCESSO!");
+  popup("");
+  popup("Passagem norte liberada.");
+  popup("");
+  popup("Algumas passagens reduzem o seu tempo, cuidado!");
+  playSound("media/sounds/beep.wav");
+  changeLayer("Norte");
+  changePointVisibility("Eliminar Vírus",1);
+}
+
+if (( selectedChoice.name == "Slime") && (Chip) == 0) {
+  popup("SLIME ");
+  popup("");
+  popup("Ele se multiplica, ele se divide!");
+  popup("");
+  popup("Este monstro se alimenta do conhecimento das pessoas, na linguagem Python.");
+  popup("");
+  popup("Remova seus operadores de divisão e multiplicação, acertando seus pontos vitais.");
+  playSound("media/sounds/beep.wav");
+  changeLayer("Slime");
+  changePointVisibility('all points',1);
+  changePointVisibility("}",2);
+  changePointVisibility("*",2);
+  changePointVisibility("$",2);
+} else if (( selectedChoice.name == "Slime") && (Chip) == 1) {
+  popup("DESAFIO CONCLUÍDO!");
+  popup("");
+  popup("Encontre novas áreas para explorar.");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "*") {
+  popup("EXCELENTE ATAQUE!");
+  popup("");
+  popup("Não baixe sua guarda, continue lutando.");
+  popup("");
+  popup("Ele não vai desistir facilmente!");
+  playSound("media/sounds/correct.wav");
+  changePointVisibility('all points',1);
+  changePointVisibility("/",2);
+  changePointVisibility("A",2);
+  changePointVisibility("!",2);
+}
+if ( selectedChoice.name == "/") {
+  popup("SUCESSO!");
+  popup("");
+  popup("Você conseguiu derrotar o terrível Slime.");
+  popup("");
+  popup("Recolha seu prêmio!");
+  playSound("media/sounds/correct.wav");
+  changeLayer("Bônus Slime");
+  changePointVisibility('all points',1);
+  changePointVisibility("Chip",2);
+}
+if ( selectedChoice.name == "A") {
+  changePointVisibility("A",1);
+  popup("ATAQUE ERRADO!");
+  popup("");
+  popup("Cuidado para não morrer aqui, sua saúde está diminuindo a cada erro.");
+  popup("");
+  popup("Tente outra vez");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "!") {
+  changePointVisibility("!",1);
+  popup("ATAQUE ERRADO!");
+  popup("");
+  popup("Concentração.");
+  popup("");
+  popup("Tente outra vez");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "}") {
+  changePointVisibility("}",1);
+  popup("ATAQUE ERRADO!");
+  popup("");
+  popup("Cuidado com sua saúde.");
+  popup("");
+  popup("Tente outra vez");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "$") {
+  changePointVisibility("$",1);
+  popup("ESCAPOU!");
+  popup("");
+  popup("Ele está se esquivando de seus ataques..");
+  popup("");
+  popup("Tente outra vez");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "Chip") {
+  changePointVisibility("Chip",1);
+  changePointVisibility("Saída Slime",2);
+  popup("Acesso de computadores disponível na região norte.");
+  popup("");
+  popup("( Saúde +10 )");
+  popup("");
+  popup("( Tempo +10 )");
+  popup("");
+  popup("( Ouro +1 )");
+  popup("");
+  popup("( Exp +25 )");
+  playSound("media/sounds/correct.wav");
+}
+if ( selectedChoice.name == "Saída Slime") {
+  changeLayer("Vila Python");
+}
+
+if (( selectedChoice.name == "Sala Secreta") && (Experiência) < 155) {
+  popup("BLOQUEADA!");
+  popup("");
+  popup("Conectada ao sistema If e Else.");
+  popup("");
+  popup("Desbloqueio por computador.");
+  playSound("media/sounds/beep.wav");
+} else if (( selectedChoice.name == "Sala Secreta") && (Experiência) <= 175) {
+  popup("VINGANÇA DO OGRO!");
+  popup("");
+  popup("Derrote o Ogro para ter sua permissão de acesso.");
+  popup("");
+  popup("Cada resposta correta ele perde um pouco de sua energia.");
+  popup("");
+  popup("Boa Sorte!");
+  changeLayer("Ogro Menu");
+  playSound("media/sounds/door_open.wav");
+} else if (( selectedChoice.name == "Sala Secreta") && (Experiência) > 175) {
+  popup("EVENTO CONCLUÍDO!");
+  popup("");
+  popup("Você pode acessar a última sala.");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "Desafiar") {
+  changeLayer("Ogro A");
+  playSound("media/sounds/intro.wav");
+}
+if ( selectedChoice.name == "Fugir") {
+  changeLayer("Salão Principal");
+  playSound("media/sounds/door_open.wav");
+}
+if ( selectedChoice.name == "A (Sim)") {
+  changeLayer("Ogro B");
+  playSound("media/sounds/correct.wav");
+}
+if ( selectedChoice.name == "A (Não)") {
+  popup("RESPOSTA ERRADA");
+  popup("");
+  popup("Tente quantas vezes quiser, mas cuidado com sua saúde e seu tempo.");
+  playSound("media/sounds/fail.wav");
+  changeLayer("Ogro Menu");
+}
+if ( selectedChoice.name == "B (Não)") {
+  popup("RESPOSTA ERRADA");
+  popup("");
+  popup("Cuidado para não ficar pelo caminho!");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "B (Sim)") {
+  changeLayer("Ogro C");
+  playSound("media/sounds/correct.wav");
+}
+if ( selectedChoice.name == "C (Não)") {
+  changeLayer("Ogro D");
+  playSound("media/sounds/correct.wav");
+}
+if ( selectedChoice.name == "C (Sim)") {
+  popup("OGRO");
+  popup("");
+  popup("não acredito, será que você é meu irmão?");
+  popup("");
+  popup("Tente outra vez.");
+  playSound("media/sounds/fail.wav");
+}
+if ( selectedChoice.name == "Saída / Obrigado") {
+  popup("SUCESSO!");
+  popup("");
+  popup("Agora você possui a permissão do Ogro, vá até a sala (A).");
+  popup("");
+  popup("( Saúde +4 )");
+  popup("");
+  popup("( Tempo +5 )");
+  popup("");
+  popup("( Exp +30 )");
+  changeLayer("Salão Principal");
+  playSound("media/sounds/door_open.wav");
+}
+if (( selectedChoice.name == "Sala De Armas") && (Machado) == 0) {
+  popup("BLOQUEADA!");
+  popup("");
+  popup("Porta trancada com feitiço.");
+  popup("");
+  popup("Será necessário o machado mágico para abrir.");
+  popup("");
+  playSound("media/sounds/beep.wav");
+} else if (( selectedChoice.name == "Sala De Armas") && ((Machado) == 1 && (Escudo) == 0)) {
+  changeLayer("Armas");
+  playSound("media/sounds/door_open.wav");
+} else if (( selectedChoice.name == "Sala De Armas") && ((Machado) == 1 && (Escudo) == 1)) {
+  popup("ÁREA CONCLUÍDA!");
+  playSound("media/sounds/beep.wav");
+}
+if ( selectedChoice.name == "Escudo") {
+  changeLayer("Armas B");
+  popup("ESCUDO!");
+  popup("");
+  popup("Você coletou escudo, agora falta pouco!");
+  playSound("media/sounds/heal.wav");
+}
+if ( selectedChoice.name == "Saída Armas") {
+  changeLayer("Salão Principal");
+  playSound("media/sounds/door_open.wav");
+}

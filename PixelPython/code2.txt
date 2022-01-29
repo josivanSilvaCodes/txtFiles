@@ -1,0 +1,18 @@
+if ((Saúde) <= 0) {
+  popup("FIM DA LINHA!");
+  popup("");
+  popup("Não deixe sua saúde chegar a zero!");
+  playSound("media/sounds/lose.wav");
+  endGame();
+}
+if ((Tempo) <= 0) {
+  popup("TEMPO!");
+  popup("");
+  popup("Você não conseguiu salvar o mundo a tempo.");
+  playSound("media/sounds/lose.wav");
+  endGame();
+}
+if ( selectedChoice.name == "End Game") {
+  playSound("media/sounds/lose.wav");
+  endGame();
+}
