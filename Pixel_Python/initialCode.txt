@@ -1,0 +1,13 @@
+  var Saúde = 50;
+  var Tempo = 70;
+  var Experiência = 0;
+  var Ouro = 0;
+  var Chave = 0;
+  var Capacete = 0;
+  var Espada = 0;
+  var Armadura = 0;
+  var Escudo = 0;
+  var Chip = 0;
+  var Machado = 0;
+var selectedPoint = ' '; 
+ var movescounter = 0;
