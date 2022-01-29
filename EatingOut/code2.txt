@@ -1,0 +1,20 @@
+if ((Joy) <= 0) {
+  popup("Game is over. You are not happy!");
+  playSound("media/sounds/lose2.wav");
+  endGame();
+}
+if ((Money) <= 0) {
+  popup("You don't have enough money! Game is over");
+  playSound("media/sounds/lose.wav");
+  endGame();
+}
+if ((Health) < 3) {
+  popup("Your health is so bad! :(");
+  playSound("media/sounds/lose2.wav");
+  endGame();
+}
+if ((Hunger) >= 15) {
+  popup("You are so hungry! Try again");
+  playSound("media/sounds/lose2.wav");
+  endGame();
+}

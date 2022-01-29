@@ -1,0 +1,6 @@
+var Joy = 10;
+var Money = 30;
+var Health = 10;
+var Hunger = 5;
+var selectedPoint = ' '; 
+var movescounter = 0;
