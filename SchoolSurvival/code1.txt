@@ -1,0 +1,29 @@
+if ( selectedChoice.name == "Leave School") {
+  changeLayer("ÎšÎŸÎ Î‘ÎÎ‘");
+  changePointVisibility('all points',2);
+}
+if ( selectedChoice.name == "Entrance") {
+  changeLayer("Î”Î™Î‘Î”Î¡ÎŸÎœÎŸÎ£");
+  playSound("media/sounds/door_open.wav");
+  changePointVisibility('all points',2);
+}
+if ( selectedChoice.name == "C1") {
+  changeLayer("Î“1");
+  playSound("media/sounds/door_open.wav");
+  changePointVisibility('all points',2);
+}
+if ( selectedChoice.name == "C2") {
+  changeLayer("Î“4");
+  playSound("media/sounds/door_open.wav");
+  changePointVisibility('all points',2);
+}
+if ( selectedChoice.name == "C3") {
+  changeLayer("Î“3");
+  playSound("media/sounds/door_open.wav");
+  changePointVisibility('all points',2);
+}
+if ( selectedChoice.name == "Exit") {
+  changeLayer("Main");
+  playSound("media/sounds/door_open.wav");
+  changePointVisibility('all points',2);
+}

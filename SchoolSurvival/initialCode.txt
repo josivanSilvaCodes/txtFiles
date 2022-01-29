@@ -1,0 +1,7 @@
+var Boredom = 10;
+var Knowledge = 20;
+var Joy = 20;
+var Health = 20;
+var Danger = 0;
+var selectedPoint = ' '; 
+var movescounter = 0;

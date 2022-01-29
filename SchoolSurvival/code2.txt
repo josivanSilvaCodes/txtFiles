@@ -1,0 +1,25 @@
+if ((Danger) >= 50) {
+  popup("Î›Ï…Ï€Î¬Î¼Î±Î¹ Î­Ï‡Î±ÏƒÎµÏ‚!Î¤Î·Î»Î­Ï†Ï‰Î½Î¿ ÏƒÏ„Î¿ ÏƒÏ€Î¯Ï„Î¹ ÎºÎ±Î¹ Ï€Î±Î½Ï„ÏŒÏ†Î»Î± ");
+  playSound("media/sounds/lose2.wav");
+  endGame();
+}
+if ((Knowledge) <= 10) {
+  popup("Game over! Go home!");
+  playSound("media/sounds/lose2.wav");
+  endGame();
+}
+if ((Boredom) >= 50) {
+  popup("Game over! You died from boredom");
+  playSound("media/sounds/lose.wav");
+  endGame();
+}
+if ((Health) <= 5) {
+  popup("Game over! Go to a doctor now!");
+  playSound("media/sounds/lose2.wav");
+  endGame();
+}
+if ((Joy) <= 2) {
+  popup("Game over! You are depressed :(");
+  playSound("media/sounds/lose2.wav");
+  endGame();
+}
