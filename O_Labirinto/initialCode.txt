@@ -1,0 +1,10 @@
+var SaÃºde = 1;
+  var Coragem = 1;
+  var ForÃ§a = 1;
+  var EXP = 0;
+  var CansaÃ§o = 0;
+  var PedaÃ§o_Mapa = 0;
+  var NÃ­vel = 0;
+  var Chave = 0;
+var selectedPoint = ' '; 
+ var movescounter = 0;
