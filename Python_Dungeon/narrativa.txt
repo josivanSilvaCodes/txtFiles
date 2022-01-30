@@ -1,0 +1,8 @@
+O jogo será vencido quando o jogar encontra as 4
+chaves espalhadas pelo mundo que será utilizado para abrir a porta da caverna e escapar. Combate O
+jogador vai combater os inimigos através do mouse fazendo a sua escolha durante a batalha
+escolhendo as alternativas propostas. Para enfrentar os inimigos, o jogador vai passar por desafios de
+perguntas e respostas no estilo rpg, de acordo com a resposta sendo correta ou errada, terá
+animações do inimigo atacando o jogador e do jogador atacando o inimigo. A conversa com os
+personagens do jogo é muito importante para o combate do jogo, pois eles vão dar as informações
+necessárias para poder passar pelos inimigos.
