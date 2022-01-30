@@ -1,0 +1,5 @@
+Em mundo de programação, cavaleiros e monstros a linguagem de programação Python é a chave
+para salvar a humanidade. Com sua sede por poder o malvado Rasputim criou um feitiço, utilizando
+os livros de programação Python e pretende dominar o reino de Pythonos com seu exército de
+criaturas. O jogador deverá ajudar o nosso bravo guerreiro Artur, para acabar com esse plano será
+necessário aprender a linguagem de programação Python para desfazer esse feitiço.
